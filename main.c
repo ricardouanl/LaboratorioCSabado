@@ -29,7 +29,9 @@ int main() {
 	output = 2.0/3.0 * (x-(1-(x-2)/3.0)) + 1;
 	printf("El output de la tercera funcion algebraica es: %f \n", output);
 
-
+	// Calculo para la cuarta funcion algebraica
+	output = 2-(-2*(x+1) - (x-3)/2.0);
+	printf("El output de la cuarta funcion algebraica es: %f \n", output);
 
 	return 0;
 }
