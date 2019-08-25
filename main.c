@@ -1,9 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
+* Autor: Jose Ricardo De Anda Caballero
+* Fecha: 25/08/2019
+* Grupo: 008
+* Horario: Sabado 9am-11am
+* Matricula: 1447001
+*/
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#include<stdio.h>
 
-int main(int argc, char *argv[]) {
-	//Este comentario es para identificar el branch Practica3
+int main() {
+	// Declaracion de variables
+	int x;
+	float output;
+
+	// Pedimos al usuario el valor de x
+	printf("Ingrese el valor de x: ");
+	scanf("%d", &x);
+
+	// Calculo para la primera funcion algebraica
+	output = (x-1)/4.0 - (x-5)/36.0;
+	printf("El output de la primera funcion algebraica es: %f \n", output);
+
+
+
 	return 0;
 }
+
+
