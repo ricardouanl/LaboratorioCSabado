@@ -25,6 +25,10 @@ int main() {
 	output = 6*((x+1)/8.0 - (2*x-3)/16.0);
 	printf("El output de la segunda funcion algebraica es: %f \n", output);
 
+	// Calculo para la tercera funcion algebraica
+	output = 2.0/3.0 * (x-(1-(x-2)/3.0)) + 1;
+	printf("El output de la tercera funcion algebraica es: %f \n", output);
+
 
 
 	return 0;
