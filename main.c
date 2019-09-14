@@ -2,18 +2,22 @@
 
 int main(int argc, char *argv[]) {
 	int num, sum;
-	char more;
+	char more = 's';
 	sum = 0;
 
 	while(more != 'n'){
 		printf("Introduzca un numero entero: ");
-		scanf("%d", num);
+		scanf("%d", &num);
 		sum = sum + num;
 		printf("Desea introducir otro(s/n)?: ");
-		scanf("%c", &more);
+		scanf(" %c", &more);
 	}
 
 	printf("La suma de los numeros introducidos es: %d", sum);
-
+	
+	/* Actividad 2 */
+	
+	
 	return 0;
 }
+
