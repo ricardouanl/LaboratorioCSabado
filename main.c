@@ -1,3 +1,11 @@
+/*
+* Autor: Jose Ricardo De Anda Caballero
+* Fecha: 14/09/2019
+* Grupo: 008
+* Horario: Sabado 9am-11am
+* Matricula: 1447001
+*/
+
 #include<stdio.h>
 
 int main(int argc, char *argv[]) {
