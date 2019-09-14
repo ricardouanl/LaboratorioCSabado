@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 	
 	//**************ACTIVIDAD2*****************
 	
-	int x;
+	int x = 0;
 
 	// Ciclo para seguir pidiendo numeros hasta que el numero sea mayor a 100
 	while(x<= 100) {
