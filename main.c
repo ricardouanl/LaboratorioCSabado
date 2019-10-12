@@ -13,51 +13,50 @@ int main() {
 
 	//**************ACTIVIDAD1*****************
 
-	char str[100];
+	// Declaracion de Variables
+	int palindromoFlag = 1;
 
-	char str2[100];
-	int str2Len = 0;
+	char str[100];
+	char strJoined[100];
+	int strJoinedSize = 0;
 
 	int i = 0;
-	int palindromo = 1;
 
+	// Lectura de la cadena
 	printf("Ingrese la cadena \n");
 	gets(str);
 
+	// Ciclo para generar una nueva cadena sin espacios ' '
 	for (i=0; i<strlen(str); i++) {
 		if ( str[i] != ' ' ) {
-			str2[str2Len] = str[i];
-			str2Len++;
+			strJoined[strJoinedSize] = str[i];
+			strJoinedSize++;
 		}
 	}
 
-
-	for (i = 0; i < strlen(str2); i++) {
-
-		if( str2[i] != str2[strlen(str2)-i-1] )
-			palindromo = 0;
+	// Ciclo para validar si es un palindromo
+	for (i = 0; i < strlen(strJoined); i++) {
+		if( strJoined[i] != strJoined[strlen(strJoined)-i-1] )
+			palindromoFlag = 0;
 	}
 	
-	if (palindromo == 1)
-		printf("La cadena es palindromo");
+	if (palindromoFlag == 1)
+		printf("La cadena es palindromo \n");
 	else
-		printf("La cadena no es palindromo");
-
-
-	// Declaracion del arreglo
-	
-	
-
-	// Asignacion del valor
-
+		printf("La cadena no es palindromo \n");
 
 	//**************ACTIVIDAD2*****************
 
-	char str3[20] = {'a', 'x', 'a', 'f', 'h', 'w', 'w', 'w', 'q', 'a', 'q', 'u', 'n', 'o', 'p', 'h', 'h', 'p', 's', 's' }
+	// Declaracion de arreglo de 20 caracteres
+	char str2[20] = {'a', 'x', 'a', 'f', 'h', 'w', 'w', 'w', 'q', 'a', 'q', 'u', 'n', 'o', 'p', 'h', 'h', 'p', 's', 's' };
+
+	char alphaLetters[26] = { 'a' ,'b' ,'c' ,'d' ,'e' ,'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p' ,'q' ,'r' ,'s' ,'t' ,'u' ,'v' ,'w' ,'x' ,'y' ,'z' };
+
+	// Arreglo de control de ocurrencia
 	int alpha[26] = {0};
 
-	for (i=0;i<20;i++){
-		switch( str3[i] ){
+	for (i=0; i<20; i++){
+		switch( str2[i] ){
 			case 'a':
 				alpha[0] = alpha[0] + 1;
 				break;
@@ -139,10 +138,17 @@ int main() {
 		}
 	}
 
-	for(i=0; i<26; i++){
-	}
+	printf("================\n");
 
+	// Mostramos el arreglo de 20 caracteres
+	for(i=0; i<20; i++)
+		printf(" %c ", str2[i]);
+
+	printf("\n================\n");
+
+	// Mostramos las ocurrencias de cada letra
+	for(i=0; i<26; i++)
+		printf("%c: %d \n", alphaLetters[i], alpha[i]);
 
 	return 0;
 }
-
