@@ -10,25 +10,28 @@
 
 // Declaracion de funciones
 int primo(int num);
-int potencia(int num2, int pot);
+int potencia(int num, int pot);
 
 int main() {
 
 	//**************ACTIVIDAD1*****************
 
 	// Declaracion de Variables
-	int num, num2, pot;
+	int num;
 
 	printf("Ingrese el numero: ");
 	scanf("%d", &num);
 
-	// Llamamos a la funcion primo con el parametro entero
+	// Llamamos a la funcion primo pasando como parametro el numero capturado
 	if ( primo(num) )
 		printf("El numero es primo \n");
 	else
 		printf("El numero no es primo \n");
 
+
 	//**************ACTIVIDAD2*****************
+
+	int num2, pot;
 	
 	// Declaracion de Variables
 	printf("Ingrese el numero a elevar: ");
@@ -36,7 +39,7 @@ int main() {
 	printf("Ingrese el valor de la potencia: ");
 	scanf("%d", &pot);
 
-	// Llamamos a la funcion potencia con los parametros de numero y la potencia a la que se elevara
+	// Llamamos a la funcion potencia pasando como parametros el numero y la potencia a la que se elevara
 	printf("El numero %d elevado a la potencia %d es %d", num2, pot, potencia(num2, pot));
 
 	return 0;
@@ -46,11 +49,12 @@ int primo(int num) {
 	if (num < 1)
 		return 0;
 
-	int i, a, flag;
+	int i, flag, half;
 	flag = 1;
-	a = num/2;
 
-	for( i = 2; i <= a; i++ ){
+	half = num/2;
+
+	for( i = 2; i <= half; i++ ){
 		if ( num % i == 0 ) {
 			flag = 0;
 			break;
@@ -60,12 +64,14 @@ int primo(int num) {
 	return flag;
 }
 
-int potencia(int num2, int pot){
+int potencia(int num, int pot){
 	int i, res;
-	res = num2;
+	res = num;
+
 	for (i = 1; i < pot; i++)
-		res = res * num2;
-	
+		res = res * num;
+
 	return res;
 }
+
 
