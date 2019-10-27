@@ -96,7 +96,7 @@ void LeerPanda(struct Panda *p) {
 	scanf(" %s", p->nombre);
 	printf("Peso: ");
 	scanf(" %d", &p->peso);
-	printf("AÃ±o de nacimiento: ");
+	printf("Año de nacimiento: ");
 	scanf(" %d", &p->anio);
 	printf("Sexo(M/F): ");
 	scanf(" %c", &p->sexo);
